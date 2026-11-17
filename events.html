@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programs & Events | RCCG Abundant Life Area, Oyo</title>
+  <meta name="description" content="Stay updated with upcoming services, special programmes, and RCCG Nigeria national events at Redemption Camp. Join RCCG Abundant Life Area, Sabo, Oyo.">
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f5ff',
+              100: '#e0ebfe',
+              200: '#bad4fd',
+              500: '#2563eb',
+              800: '#1e3a8a',
+              900: '#0f2b5c',
+              950: '#0a1b38',
+            },
+            accent: {
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/jpeg" href="images/logo.png">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-amber-400 selection:text-slate-950">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-gradient-to-r from-slate-950 via-brand-950 to-slate-950 text-white text-xs sm:text-sm py-2 px-4 border-b border-white/10">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 font-medium text-xs">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span> Live Fellowship
+        </span>
+        <span class="text-slate-300">Apata Landlord, Along Oke Mogi, Sabo, Oyo, Oyo State</span>
+      </div>
+      <div class="flex items-center gap-4 text-xs text-slate-300">
+        <a href="https://chat.whatsapp.com/invite" target="_blank" class="inline-flex items-center gap-1 text-amber-400 hover:text-amber-300 font-semibold transition-colors">
+          <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> WhatsApp Community &rarr;
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header id="mainHeader" class="sticky top-0 z-40 w-full transition-all duration-300 bg-white/95 backdrop-blur-md border-b border-slate-200/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-3.5 group">
+        <div class="w-12 h-12 rounded-xl overflow-hidden shadow-md border border-slate-200 bg-white flex items-center justify-center p-1 group-hover:scale-105 transition-transform">
+          <img src="images/logo.png" alt="RCCG Logo" class="w-full h-full object-contain">
+        </div>
+        <div class="flex flex-col">
+          <span class="text-xs uppercase tracking-widest font-bold text-brand-900 flex items-center gap-1">
+            RCCG <span class="text-amber-600 font-medium">| Area Hqtrs</span>
+          </span>
+          <span class="text-lg font-extrabold tracking-tight text-slate-900 group-hover:text-brand-900 transition-colors">
+            Abundant Life Area
+          </span>
+          <span class="text-[11px] text-slate-500 font-medium -mt-0.5">Sabo, Oyo, Oyo State</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-700">
+        <a href="index.html" class="hover:text-brand-900 transition-colors">Home</a>
+        <a href="about.html" class="hover:text-brand-900 transition-colors">About Us</a>
+        <a href="gallery.html" class="hover:text-brand-900 transition-colors">Gallery</a>
+        <a href="events.html" class="text-brand-900 border-b-2 border-brand-900 pb-0.5">Events</a>
+        <a href="contact.html" class="hover:text-brand-900 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Action -->
+      <div class="flex items-center gap-3">
+        <a href="contact.html" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-brand-900 hover:bg-brand-800 text-white text-sm font-semibold shadow-sm transition-all">
+          <span>Join Us Sunday</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+        <button id="mobileMenuToggle" type="button" aria-label="Open mobile menu" class="md:hidden p-2.5 rounded-xl text-slate-700 hover:bg-slate-100">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobileOverlay" class="fixed inset-0 bg-slate-950/60 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity duration-300"></div>
+  <div id="mobileDrawer" class="fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col justify-between">
+    <div class="p-6">
+      <div class="flex items-center justify-between pb-6 border-b border-slate-100">
+        <div class="flex items-center gap-3">
+          <img src="images/logo.png" alt="RCCG Logo" class="w-10 h-10 object-contain">
+          <div>
+            <div class="font-bold text-sm text-slate-900">Abundant Life</div>
+            <div class="text-xs text-slate-500">RCCG, Sabo, Oyo</div>
+          </div>
+        </div>
+        <button id="mobileMenuClose" aria-label="Close menu" class="p-2 text-slate-400 hover:text-slate-800">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+      <nav class="flex flex-col gap-2 mt-6">
+        <a href="index.html" class="px-4 py-3 rounded-xl text-slate-700 hover:bg-slate-50 font-semibold flex items-center justify-between">
+          <span>Home</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+        </a>
+        <a href="about.html" class="px-4 py-3 rounded-xl text-slate-700 hover:bg-slate-50 font-semibold flex items-center justify-between">
+          <span>About Us</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+        </a>
+        <a href="gallery.html" class="px-4 py-3 rounded-xl text-slate-700 hover:bg-slate-50 font-semibold flex items-center justify-between">
+          <span>Church Gallery</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+        </a>
+        <a href="events.html" class="px-4 py-3 rounded-xl bg-brand-50 text-brand-900 font-bold flex items-center justify-between">
+          <span>Programs & Events</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-brand-500"></i>
+        </a>
+        <a href="contact.html" class="px-4 py-3 rounded-xl text-slate-700 hover:bg-slate-50 font-semibold flex items-center justify-between">
+          <span>Contact & Location</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+        </a>
+      </nav>
+    </div>
+    <div class="p-6 bg-slate-50 border-t border-slate-100">
+      <a href="https://chat.whatsapp.com/invite" target="_blank" class="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-emerald-600 text-white font-semibold text-sm">
+        <i data-lucide="message-circle" class="w-4 h-4"></i>
+        <span>Join Church WhatsApp</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="navy-gradient-bg text-white py-16 text-center">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <span class="text-xs font-bold uppercase tracking-widest text-amber-400 bg-amber-400/10 px-3.5 py-1.5 rounded-full inline-block mb-3">
+        Divine Appointments
+      </span>
+      <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white">
+        Programs & Spiritual Gatherings
+      </h1>
+      <p class="text-slate-300 mt-3 text-sm sm:text-base max-w-2xl mx-auto">
+        Join us for life-transforming encounters locally at Sabo, Oyo, and nationally at Redemption City, Lagos-Ibadan Expressway.
+      </p>
+    </div>
+  </section>
+
+  <!-- EVENT CATEGORY TABS -->
+  <section class="py-12 bg-white border-b border-slate-200/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
+        <button onclick="filterEvents('all')" class="event-filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-slate-900 text-white shadow-sm transition-all" data-target="all">
+          All Programs
+        </button>
+        <button onclick="filterEvents('weekly')" class="event-filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all" data-target="weekly">
+          Weekly Services
+        </button>
+        <button onclick="filterEvents('rccg-national')" class="event-filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all" data-target="rccg-national">
+          RCCG National (Redemption City)
+        </button>
+        <button onclick="filterEvents('special')" class="event-filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all" data-target="special">
+          Special Conferences & Feasts
+        </button>
+        <button onclick="filterEvents('past')" class="event-filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all" data-target="past">
+          Past Celebrations
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS LISTING -->
+  <section class="py-16 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="eventsContainer">
+        
+        <!-- Event 1: Sunday Service -->
+        <div class="event-card weekly reveal-on-scroll bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/80 shadow-sm hover-lift flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+              <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-50 text-brand-900">
+                Weekly Service
+              </span>
+              <span class="text-xs font-semibold text-emerald-600 flex items-center gap-1">
+                <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Every Sunday
+              </span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mt-4 mb-2">Glorious Sunday Celebration</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+              Sunday School (8:00 AM) followed by exuberant worship, high praises, and life-changing sermon ministration (9:00 AM – 11:30 AM).
+            </p>
+            <div class="space-y-2 text-xs text-slate-500 font-medium">
+              <div class="flex items-center gap-2">
+                <i data-lucide="clock" class="w-4 h-4 text-amber-500"></i>
+                <span>8:00 AM – 11:30 AM</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="map-pin" class="w-4 h-4 text-amber-500"></i>
+                <span>Apata Landlord, Along Oke Mogi, Sabo, Oyo</span>
+              </div>
+            </div>
+          </div>
+          <div class="pt-6 border-t border-slate-100 mt-6 flex items-center justify-between">
+            <a href="contact.html#directions" class="text-xs font-bold text-brand-900 hover:text-amber-600 transition-colors flex items-center gap-1">
+              <span>Directions & Plan Visit</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+            <span class="text-[11px] text-slate-400 font-medium">Main Sanctuary</span>
+          </div>
+        </div>
+
+        <!-- Event 2: Tuesday Digging Deep -->
+        <div class="event-card weekly reveal-on-scroll delay-100 bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/80 shadow-sm hover-lift flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+              <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-50 text-amber-800">
+                Bible Study
+              </span>
+              <span class="text-xs font-semibold text-slate-500">Every Tuesday</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mt-4 mb-2">Digging Deep</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+              Deep, structured, verse-by-verse exploration of the scriptures to build solid christian character and answer doctrinal questions.
+            </p>
+            <div class="space-y-2 text-xs text-slate-500 font-medium">
+              <div class="flex items-center gap-2">
+                <i data-lucide="clock" class="w-4 h-4 text-amber-500"></i>
+                <span>5:30 PM – 7:00 PM</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="map-pin" class="w-4 h-4 text-amber-500"></i>
+                <span>Main Sanctuary, Sabo, Oyo</span>
+              </div>
+            </div>
+          </div>
+          <div class="pt-6 border-t border-slate-100 mt-6 flex items-center justify-between">
+            <a href="https://chat.whatsapp.com/invite" target="_blank" class="text-xs font-bold text-emerald-600 hover:text-emerald-700 flex items-center gap-1">
+              <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+              <span>Get Study Outlines on WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Event 3: Thursday Faith Clinic -->
+        <div class="event-card weekly reveal-on-scroll delay-200 bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/80 shadow-sm hover-lift flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+              <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-red-50 text-red-800">
+                Miracle & Prayer
+              </span>
+              <span class="text-xs font-semibold text-slate-500">Every Thursday</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mt-4 mb-2">Faith Clinic & Deliverance</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+              An intense prayer altar for divine healing, breakthrough, destruction of yokes, and pastoral counseling sessions.
+            </p>
+            <div class="space-y-2 text-xs text-slate-500 font-medium">
+              <div class="flex items-center gap-2">
+                <i data-lucide="clock" class="w-4 h-4 text-amber-500"></i>
+                <span>5:30 PM – 7:00 PM</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="heart" class="w-4 h-4 text-amber-500"></i>
+                <span>Bring your prayer needs</span>
+              </div>
+            </div>
+          </div>
+          <div class="pt-6 border-t border-slate-100 mt-6 flex items-center justify-between">
+            <a href="contact.html#prayer" class="text-xs font-bold text-brand-900 hover:text-amber-600 transition-colors flex items-center gap-1">
+              <span>Send Prayer Request</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Event 4: RCCG Monthly Holy Ghost Service (Redemption Camp) -->
+        <div class="event-card rccg-national reveal-on-scroll bg-gradient-to-br from-slate-900 to-brand-950 text-white rounded-3xl p-6 sm:p-7 border border-white/10 shadow-lg hover-lift flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between pb-4 border-b border-white/10">
+              <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-400 text-slate-950">
+                National Program
+              </span>
+              <span class="text-xs font-semibold text-amber-300">1st Friday Monthly</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mt-4 mb-2">RCCG Monthly Holy Ghost Service</h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
+              Officiated by Pastor E.A. Adeboye. A night of supernatural signs, miracles, prophecies, and worship with millions of believers worldwide.
+            </p>
+            <div class="space-y-2 text-xs text-slate-300 font-medium">
+              <div class="flex items-center gap-2">
+                <i data-lucide="clock" class="w-4 h-4 text-amber-400"></i>
+                <span>7:00 PM till Dawn</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="map-pin" class="w-4 h-4 text-amber-400"></i>
+                <span>Redemption City, KM 46, Lagos-Ibadan Expressway</span>
+              </div>
+            </div>
+          </div>
+          <div class="pt-6 border-t border-white/10 mt-6 flex items-center justify-between">
+            <span class="text-xs text-amber-400 font-semibold">Church Bus / Viewing Available</span>
+            <a href="contact.html" class="px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-bold transition-all">
+              Details &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Event 5: RCCG Annual Convention (Redemption Camp) -->
+        <div class="event-card rccg-national reveal-on-scroll delay-100 bg-gradient-to-br from-slate-900 to-brand-950 text-white rounded-3xl p-6 sm:p-7 border border-white/10 shadow-lg hover-lift flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between pb-4 border-b border-white/10">
+              <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-400 text-slate-950">
+                Annual Convention
+              </span>
+              <span class="text-xs font-semibold text-amber-300">Every August</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mt-4 mb-2">RCCG Global Annual Convention</h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
+              7 Glorious days of spiritual empowerment, ordinations, teachings, and unprecedented anointing for believers from over 190 nations.
+            </p>
+            <div class="space-y-2 text-xs text-slate-300 font-medium">
+              <div class="flex items-center gap-2">
+                <i data-lucide="calendar" class="w-4 h-4 text-amber-400"></i>
+                <span>1st Full Week of August</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="map-pin" class="w-4 h-4 text-amber-400"></i>
+                <span>Redemption City & Abundant Life Area Viewing</span>
+              </div>
+            </div>
+          </div>
+          <div class="pt-6 border-t border-white/10 mt-6 flex items-center justify-between">
+            <span class="text-xs text-amber-400 font-semibold">Worldwide Gathering</span>
+            <a href="contact.html" class="px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-bold transition-all">
+              Details &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Event 6: RCCG Holy Ghost Congress (December) -->
+        <div class="event-card rccg-national reveal-on-scroll delay-200 bg-gradient-to-br from-slate-900 to-brand-950 text-white rounded-3xl p-6 sm:p-7 border border-white/10 shadow-lg hover-lift flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between pb-4 border-b border-white/10">
+              <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-400 text-slate-950">
+                Holy Ghost Congress
+              </span>
+              <span class="text-xs font-semibold text-amber-300">Every December</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mt-4 mb-2">Holy Ghost Congress</h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
+              The grand year-end spiritual banquet bringing hope, answers to prayer, and preparation for victory in the coming year.
+            </p>
+            <div class="space-y-2 text-xs text-slate-300 font-medium">
+              <div class="flex items-center gap-2">
+                <i data-lucide="clock" class="w-4 h-4 text-amber-400"></i>
+                <span>6 Nights of Wonders</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="map-pin" class="w-4 h-4 text-amber-400"></i>
+                <span>Redemption City, Nigeria</span>
+              </div>
+            </div>
+          </div>
+          <div class="pt-6 border-t border-white/10 mt-6 flex items-center justify-between">
+            <span class="text-xs text-amber-400 font-semibold">End-of-Year Encounter</span>
+            <a href="contact.html" class="px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-bold transition-all">
+              Details &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Event 7: Special Area Feast / Anniversary -->
+        <div class="event-card special reveal-on-scroll bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/80 shadow-sm hover-lift flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+              <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-purple-50 text-purple-800">
+                Special Program
+              </span>
+              <span class="text-xs font-semibold text-purple-600">Annual Event</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mt-4 mb-2">Abundant Life Area Praise Feast</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+              An unforgettable weekend of ceaseless praise, guest ministers, choral renditions, and celebration of God's abundant faithfulness over Oyo land.
+            </p>
+            <div class="space-y-2 text-xs text-slate-500 font-medium">
+              <div class="flex items-center gap-2">
+                <i data-lucide="music" class="w-4 h-4 text-amber-500"></i>
+                <span>Mass Choirs & Guest Artists</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="map-pin" class="w-4 h-4 text-amber-500"></i>
+                <span>Apata Landlord, Sabo, Oyo</span>
+              </div>
+            </div>
+          </div>
+          <div class="pt-6 border-t border-slate-100 mt-6 flex items-center justify-between">
+            <a href="https://chat.whatsapp.com/invite" target="_blank" class="text-xs font-bold text-brand-900 hover:text-amber-600 flex items-center gap-1">
+              <span>Get notifications on WhatsApp</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Event 8: Past Event - Youth Ignite Conference -->
+        <div class="event-card past reveal-on-scroll delay-100 bg-slate-100/80 rounded-3xl p-6 sm:p-7 border border-slate-200/80 flex flex-col justify-between opacity-90">
+          <div>
+            <div class="flex items-center justify-between pb-4 border-b border-slate-200">
+              <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-slate-200 text-slate-700">
+                Past Gathering
+              </span>
+              <span class="text-xs font-semibold text-slate-500">Concluded</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-800 mt-4 mb-2">Youth Ignite Summit: Flourishing Leaders</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+              Equipping hundreds of youth with leadership skills, digital competencies, career vision, and spiritual discipline.
+            </p>
+            <div class="text-xs text-slate-500">
+              <span class="font-bold text-slate-700">Outcome:</span> Over 50 testimonies of career breakthroughs and salvation recorded!
+            </div>
+          </div>
+          <div class="pt-6 border-t border-slate-200 mt-6 flex items-center justify-between">
+            <a href="gallery.html" class="text-xs font-bold text-brand-900 hover:underline flex items-center gap-1">
+              <span>View event photos in Gallery</span>
+              <i data-lucide="image" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Event 9: Past Event - Area Deliverance Week -->
+        <div class="event-card past reveal-on-scroll delay-200 bg-slate-100/80 rounded-3xl p-6 sm:p-7 border border-slate-200/80 flex flex-col justify-between opacity-90">
+          <div>
+            <div class="flex items-center justify-between pb-4 border-b border-slate-200">
+              <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-slate-200 text-slate-700">
+                Past Gathering
+              </span>
+              <span class="text-xs font-semibold text-slate-500">Concluded</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-800 mt-4 mb-2">7 Days of Supernatural Abundance</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+              A week of fasting, daily evening communion, and anointing service with signs following.
+            </p>
+            <div class="text-xs text-slate-500">
+              <span class="font-bold text-slate-700">Location:</span> Sabo, Oyo Sanctuary
+            </div>
+          </div>
+          <div class="pt-6 border-t border-slate-200 mt-6 flex items-center justify-between">
+            <a href="gallery.html" class="text-xs font-bold text-brand-900 hover:underline flex items-center gap-1">
+              <span>View photos in Gallery</span>
+              <i data-lucide="image" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 text-slate-400 pt-16 pb-12 border-t border-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800/80">
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <img src="images/logo.png" alt="RCCG Logo" class="w-12 h-12 object-contain bg-white rounded-lg p-1">
+            <div>
+              <span class="text-xs uppercase tracking-widest text-amber-500 font-bold block">RCCG</span>
+              <span class="text-lg font-bold text-white block">Abundant Life Area</span>
+            </div>
+          </div>
+          <p class="text-sm text-slate-400 leading-relaxed max-w-sm">
+            Apata Landlord, Along Oke Mogi, Sabo, Oyo, Oyo State. Experience divine grace and spiritual fulfillment.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-white font-bold text-sm mb-4 uppercase tracking-wider">Navigation</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="hover:text-amber-400 transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-amber-400 transition-colors">About Us</a></li>
+            <li><a href="gallery.html" class="hover:text-amber-400 transition-colors">Gallery</a></li>
+            <li><a href="events.html" class="hover:text-amber-400 transition-colors">Events</a></li>
+            <li><a href="contact.html" class="hover:text-amber-400 transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold text-sm mb-4 uppercase tracking-wider">Gatherings</h4>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li><span class="text-white font-medium block">Sunday Service</span> 8:00 AM – 11:30 AM</li>
+            <li><span class="text-white font-medium block">Digging Deep (Tue)</span> 5:30 PM – 7:00 PM</li>
+            <li><span class="text-white font-medium block">Faith Clinic (Thu)</span> 5:30 PM – 7:00 PM</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold text-sm mb-4 uppercase tracking-wider">Connect</h4>
+          <div class="flex items-center gap-2.5">
+            <a href="https://chat.whatsapp.com/invite" target="_blank" class="w-9 h-9 rounded-full bg-emerald-600/20 text-emerald-400 hover:bg-emerald-600 hover:text-white flex items-center justify-center transition-colors">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+            </a>
+            <a href="https://facebook.com" target="_blank" class="w-9 h-9 rounded-full bg-slate-800 text-slate-300 hover:bg-blue-600 hover:text-white flex items-center justify-center transition-colors">
+              <i data-lucide="facebook" class="w-4 h-4"></i>
+            </a>
+            <a href="https://youtube.com" target="_blank" class="w-9 h-9 rounded-full bg-slate-800 text-slate-300 hover:bg-red-600 hover:text-white flex items-center justify-center transition-colors">
+              <i data-lucide="youtube" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="pt-8 text-xs text-slate-500 text-center">
+        &copy; 2026 RCCG Abundant Life Area, Sabo, Oyo. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    lucide.createIcons();
+
+    // Event filtering function
+    function filterEvents(category) {
+      const cards = document.querySelectorAll('.event-card');
+      const buttons = document.querySelectorAll('.event-filter-btn');
+
+      buttons.forEach(btn => {
+        if (btn.dataset.target === category) {
+          btn.classList.add('bg-slate-900', 'text-white', 'shadow-sm');
+          btn.classList.remove('bg-slate-100', 'text-slate-700');
+        } else {
+          btn.classList.remove('bg-slate-900', 'text-white', 'shadow-sm');
+          btn.classList.add('bg-slate-100', 'text-slate-700');
+        }
+      });
+
+      cards.forEach(card => {
+        if (category === 'all' || card.classList.contains(category)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | RCCG Abundant Life Area, Oyo</title>
+  <meta name="description" content="Discover the vision, mission, and pastoral leadership of RCCG Abundant Life Area, Sabo, Oyo, Oyo State. Committed to preaching holiness, grace, and life in abundance.">
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f5ff',
+              100: '#e0ebfe',
+              200: '#bad4fd',
+              500: '#2563eb',
+              800: '#1e3a8a',
+              900: '#0f2b5c',
+              950: '#0a1b38',
+            },
+            accent: {
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/jpeg" href="images/logo.png">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-amber-400 selection:text-slate-950">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-gradient-to-r from-slate-950 via-brand-950 to-slate-950 text-white text-xs sm:text-sm py-2 px-4 border-b border-white/10">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 font-medium text-xs">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span> Live Fellowship
+        </span>
+        <span class="text-slate-300">Apata Landlord, Along Oke Mogi, Sabo, Oyo, Oyo State</span>
+      </div>
+      <div class="flex items-center gap-4 text-xs text-slate-300">
+        <a href="https://chat.whatsapp.com/invite" target="_blank" class="inline-flex items-center gap-1 text-amber-400 hover:text-amber-300 font-semibold transition-colors">
+          <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> WhatsApp Community &rarr;
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header id="mainHeader" class="sticky top-0 z-40 w-full transition-all duration-300 bg-white/95 backdrop-blur-md border-b border-slate-200/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-3.5 group">
+        <div class="w-12 h-12 rounded-xl overflow-hidden shadow-md border border-slate-200 bg-white flex items-center justify-center p-1 group-hover:scale-105 transition-transform">
+          <img src="images/logo.png" alt="RCCG Logo" class="w-full h-full object-contain">
+        </div>
+        <div class="flex flex-col">
+          <span class="text-xs uppercase tracking-widest font-bold text-brand-900 flex items-center gap-1">
+            RCCG <span class="text-amber-600 font-medium">| Area Hqtrs</span>
+          </span>
+          <span class="text-lg font-extrabold tracking-tight text-slate-900 group-hover:text-brand-900 transition-colors">
+            Abundant Life Area
+          </span>
+          <span class="text-[11px] text-slate-500 font-medium -mt-0.5">Sabo, Oyo, Oyo State</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-700">
+        <a href="index.html" class="hover:text-brand-900 transition-colors">Home</a>
+        <a href="about.html" class="text-brand-900 border-b-2 border-brand-900 pb-0.5">About Us</a>
+        <a href="gallery.html" class="hover:text-brand-900 transition-colors">Gallery</a>
+        <a href="events.html" class="hover:text-brand-900 transition-colors">Events</a>
+        <a href="contact.html" class="hover:text-brand-900 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Action -->
+      <div class="flex items-center gap-3">
+        <a href="contact.html" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-brand-900 hover:bg-brand-800 text-white text-sm font-semibold shadow-sm transition-all">
+          <span>Join Us Sunday</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+        <button id="mobileMenuToggle" type="button" aria-label="Open mobile menu" class="md:hidden p-2.5 rounded-xl text-slate-700 hover:bg-slate-100">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobileOverlay" class="fixed inset-0 bg-slate-950/60 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity duration-300"></div>
+  <div id="mobileDrawer" class="fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col justify-between">
+    <div class="p-6">
+      <div class="flex items-center justify-between pb-6 border-b border-slate-100">
+        <div class="flex items-center gap-3">
+          <img src="images/logo.png" alt="RCCG Logo" class="w-10 h-10 object-contain">
+          <div>
+            <div class="font-bold text-sm text-slate-900">Abundant Life</div>
+            <div class="text-xs text-slate-500">RCCG, Sabo, Oyo</div>
+          </div>
+        </div>
+        <button id="mobileMenuClose" aria-label="Close menu" class="p-2 text-slate-400 hover:text-slate-800">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+      <nav class="flex flex-col gap-2 mt-6">
+        <a href="index.html" class="px-4 py-3 rounded-xl text-slate-700 hover:bg-slate-50 font-semibold flex items-center justify-between">
+          <span>Home</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+        </a>
+        <a href="about.html" class="px-4 py-3 rounded-xl bg-brand-50 text-brand-900 font-bold flex items-center justify-between">
+          <span>About Us</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-brand-500"></i>
+        </a>
+        <a href="gallery.html" class="px-4 py-3 rounded-xl text-slate-700 hover:bg-slate-50 font-semibold flex items-center justify-between">
+          <span>Church Gallery</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+        </a>
+        <a href="events.html" class="px-4 py-3 rounded-xl text-slate-700 hover:bg-slate-50 font-semibold flex items-center justify-between">
+          <span>Programs & Events</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+        </a>
+        <a href="contact.html" class="px-4 py-3 rounded-xl text-slate-700 hover:bg-slate-50 font-semibold flex items-center justify-between">
+          <span>Contact & Location</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+        </a>
+      </nav>
+    </div>
+    <div class="p-6 bg-slate-50 border-t border-slate-100">
+      <a href="https://chat.whatsapp.com/invite" target="_blank" class="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-emerald-600 text-white font-semibold text-sm">
+        <i data-lucide="message-circle" class="w-4 h-4"></i>
+        <span>Join Church WhatsApp</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="navy-gradient-bg text-white py-20 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center max-w-3xl">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-amber-300 text-xs font-semibold uppercase tracking-wider mb-4 border border-white/10">
+        About Our Church Family
+      </div>
+      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white">
+        Rooted in Faith, Flourishing in Grace
+      </h1>
+      <p class="text-slate-300 mt-4 text-base sm:text-lg leading-relaxed">
+        We are a passionate community of believers committed to preaching holiness, loving unconditionally, and raising champions who reflect Christ in every facet of life.
+      </p>
+    </div>
+  </section>
+
+  <!-- WHO WE ARE & OUR MISSION -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-6 reveal-on-scroll">
+          <span class="text-xs font-bold uppercase tracking-widest text-amber-600 bg-amber-50 px-3.5 py-1.5 rounded-full inline-block">
+            Our Foundation
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">
+            A Haven for Spiritual Growth in Sabo, Oyo
+          </h2>
+          <p class="text-slate-600 mt-4 text-base leading-relaxed">
+            The Redeemed Christian Church of God, Abundant Life Area Headquarters is situated at <strong>Apata Landlord, Along Oke Mogi, Sabo, Oyo, Oyo State</strong>. We exist as a beacon of divine light, hope, and restoration.
+          </p>
+          <p class="text-slate-600 mt-4 text-base leading-relaxed">
+            Guided by Jesus' promise in <strong>John 10:10</strong> ("I have come that they may have life, and that they may have it more abundantly"), we foster a vibrant worship environment where gifts are discovered, character is shaped, and spiritual breakthrough becomes a daily reality.
+          </p>
+
+          <div class="mt-8 grid grid-cols-2 gap-4">
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200/80">
+              <div class="text-brand-900 font-extrabold text-2xl">Holiness</div>
+              <p class="text-xs text-slate-500 mt-1">Our daily lifestyle and ultimate passport to heaven.</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200/80">
+              <div class="text-amber-600 font-extrabold text-2xl">Abundance</div>
+              <p class="text-xs text-slate-500 mt-1">Spiritual, emotional, and physical flourishing in Christ.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 reveal-on-scroll delay-100">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="space-y-4">
+              <img src="images/c1_20261117_22074087.jpeg" alt="Church Fellowship" class="rounded-3xl shadow-md w-full h-64 object-cover">
+              <img src="images/c1_20261117_22074119.jpeg" alt="Prayer Encounter" class="rounded-3xl shadow-md w-full h-44 object-cover">
+            </div>
+            <div class="space-y-4 pt-8">
+              <img src="images/c1_20261117_22074178.jpeg" alt="Congregation Smiles" class="rounded-3xl shadow-md w-full h-44 object-cover">
+              <img src="images/c1_20261117_22074027.jpeg" alt="Sunday Gathering" class="rounded-3xl shadow-md w-full h-64 object-cover">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- RCCG GLOBAL VISION & MISSION STATEMENTS -->
+  <section class="py-20 bg-slate-50 border-y border-slate-200/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
+        <span class="text-xs uppercase tracking-widest font-extrabold text-brand-900 bg-brand-100/70 px-3.5 py-1.5 rounded-full inline-block">
+          The Mandate
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">
+          Our Vision and Mission Statements
+        </h2>
+        <p class="text-slate-600 mt-3 text-base">
+          Firmly anchored in the worldwide mission of The Redeemed Christian Church of God.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="reveal-on-scroll bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm hover-lift">
+          <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-lg mb-5">
+            01
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">To Make Heaven</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Our supreme aspiration is eternal salvation and communion with God. Heaven is our ultimate destination and hope.
+          </p>
+        </div>
+
+        <div class="reveal-on-scroll delay-100 bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm hover-lift">
+          <div class="w-12 h-12 rounded-2xl bg-brand-100 text-brand-900 flex items-center justify-center font-bold text-lg mb-5">
+            02
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Take Many With Us</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            We are relentlessly evangelistic—proclaiming Christ’s redeeming love to everyone in our neighbourhood, city, and beyond.
+          </p>
+        </div>
+
+        <div class="reveal-on-scroll delay-200 bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm hover-lift">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-lg mb-5">
+            03
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Holiness as Lifestyle</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            To accomplish our heavenly goal, righteousness, integrity, and pure living are actively cultivated in every member.
+          </p>
+        </div>
+
+        <div class="reveal-on-scroll delay-300 bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm hover-lift">
+          <div class="w-12 h-12 rounded-2xl bg-purple-100 text-purple-800 flex items-center justify-center font-bold text-lg mb-5">
+            04
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Planting Churches</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Taking the gospel within five minutes reach of every soul, establishing thriving fellowships and touching families.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MINISTRIES & DEPARTMENTS -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
+        <span class="text-xs uppercase tracking-widest font-extrabold text-amber-600 bg-amber-50 px-3.5 py-1.5 rounded-full inline-block">
+          Find Your Place
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">
+          Ministries at Abundant Life Area
+        </h2>
+        <p class="text-slate-600 mt-3 text-base">
+          Whatever your age, stage of life, or spiritual gift, there is a place for you to belong, serve, and thrive.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200/70 hover:border-brand-900 transition-colors">
+          <div class="w-12 h-12 rounded-2xl bg-brand-900 text-white flex items-center justify-center mb-4">
+            <i data-lucide="music" class="w-6 h-6 text-amber-400"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-1">Abundant Life Choir</h3>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            Ministers of praise leading the congregation into celestial atmospheres of adoration and high praise every service.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200/70 hover:border-brand-900 transition-colors">
+          <div class="w-12 h-12 rounded-2xl bg-brand-900 text-white flex items-center justify-center mb-4">
+            <i data-lucide="sparkles" class="w-6 h-6 text-amber-400"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-1">Youth & Young Adults (YAYA)</h3>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            Dynamic, visionary young leaders passionate about purpose, career excellence, spiritual fire, and godly influence.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200/70 hover:border-brand-900 transition-colors">
+          <div class="w-12 h-12 rounded-2xl bg-brand-900 text-white flex items-center justify-center mb-4">
+            <i data-lucide="shield" class="w-6 h-6 text-amber-400"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-1">Good Women Fellowship</h3>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            Virtuous mothers and sisters praying for their families, supporting the church, and impacting community welfare.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200/70 hover:border-brand-900 transition-colors">
+          <div class="w-12 h-12 rounded-2xl bg-brand-900 text-white flex items-center justify-center mb-4">
+            <i data-lucide="briefcase" class="w-6 h-6 text-amber-400"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-1">Men of Faith Fellowship</h3>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            Godly fathers, husbands, and professionals modeling biblical leadership, mentorship, and spiritual strength.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200/70 hover:border-brand-900 transition-colors">
+          <div class="w-12 h-12 rounded-2xl bg-brand-900 text-white flex items-center justify-center mb-4">
+            <i data-lucide="smile" class="w-6 h-6 text-amber-400"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-1">Children's Church (Junior Church)</h3>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            A loving, interactive, and joyful environment where children learn the scriptures through stories, songs, and memory verses.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200/70 hover:border-brand-900 transition-colors">
+          <div class="w-12 h-12 rounded-2xl bg-brand-900 text-white flex items-center justify-center mb-4">
+            <i data-lucide="tv" class="w-6 h-6 text-amber-400"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-1">Media, Sound & Evangelism</h3>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            Broadcasting the message of Christ through audiovisuals, photography, livestreams, and community soul-winning campaigns.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PASTORAL CALL TO VISIT -->
+  <section class="py-16 bg-slate-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gradient-to-r from-brand-950 via-slate-900 to-brand-950 rounded-3xl p-8 sm:p-12 border border-white/10 flex flex-col md:flex-row items-center justify-between gap-8">
+        <div class="space-y-3">
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white">
+            We Would Love to Welcome You This Week
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base max-w-xl">
+            Whether you are new in Oyo or seeking a spiritual home filled with love and truth, our doors are wide open.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-4">
+          <a href="contact.html#directions" class="px-6 py-3.5 rounded-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm shadow-lg flex items-center gap-2 transition-all">
+            <i data-lucide="navigation" class="w-4 h-4"></i>
+            <span>Get Directions to Sabo, Oyo</span>
+          </a>
+          <a href="https://chat.whatsapp.com/invite" target="_blank" class="px-6 py-3.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm transition-all flex items-center gap-2">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>Connect on WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 text-slate-400 pt-16 pb-12 border-t border-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800/80">
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <img src="images/logo.png" alt="RCCG Logo" class="w-12 h-12 object-contain bg-white rounded-lg p-1">
+            <div>
+              <span class="text-xs uppercase tracking-widest text-amber-500 font-bold block">RCCG</span>
+              <span class="text-lg font-bold text-white block">Abundant Life Area</span>
+            </div>
+          </div>
+          <p class="text-sm text-slate-400 leading-relaxed max-w-sm">
+            Apata Landlord, Along Oke Mogi, Sabo, Oyo, Oyo State. Experience divine grace and spiritual fulfillment.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-white font-bold text-sm mb-4 uppercase tracking-wider">Navigation</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="hover:text-amber-400 transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-amber-400 transition-colors">About Us</a></li>
+            <li><a href="gallery.html" class="hover:text-amber-400 transition-colors">Gallery</a></li>
+            <li><a href="events.html" class="hover:text-amber-400 transition-colors">Events</a></li>
+            <li><a href="contact.html" class="hover:text-amber-400 transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold text-sm mb-4 uppercase tracking-wider">Gatherings</h4>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li><span class="text-white font-medium block">Sunday Service</span> 8:00 AM – 11:30 AM</li>
+            <li><span class="text-white font-medium block">Digging Deep (Tue)</span> 5:30 PM – 7:00 PM</li>
+            <li><span class="text-white font-medium block">Faith Clinic (Thu)</span> 5:30 PM – 7:00 PM</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold text-sm mb-4 uppercase tracking-wider">Connect</h4>
+          <div class="flex items-center gap-2.5">
+            <a href="https://chat.whatsapp.com/invite" target="_blank" class="w-9 h-9 rounded-full bg-emerald-600/20 text-emerald-400 hover:bg-emerald-600 hover:text-white flex items-center justify-center transition-colors">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+            </a>
+            <a href="https://facebook.com" target="_blank" class="w-9 h-9 rounded-full bg-slate-800 text-slate-300 hover:bg-blue-600 hover:text-white flex items-center justify-center transition-colors">
+              <i data-lucide="facebook" class="w-4 h-4"></i>
+            </a>
+            <a href="https://youtube.com" target="_blank" class="w-9 h-9 rounded-full bg-slate-800 text-slate-300 hover:bg-red-600 hover:text-white flex items-center justify-center transition-colors">
+              <i data-lucide="youtube" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="pt-8 text-xs text-slate-500 text-center">
+        &copy; 2026 RCCG Abundant Life Area, Sabo, Oyo. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

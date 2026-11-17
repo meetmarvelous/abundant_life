@@ -108,7 +108,7 @@ function initSlider() {
   track.innerHTML = '';
   churchPhotos.forEach((photo, idx) => {
     const slide = document.createElement('div');
-    slide.className = 'slider-slide flex-shrink-0 w-full relative h-[360px] sm:h-[480px] md:h-[580px] bg-slate-900 overflow-hidden cursor-pointer';
+    slide.className = 'slider-slide flex-shrink-0 w-full relative h-[260px] xs:h-[320px] sm:h-[460px] md:h-[560px] bg-slate-900 overflow-hidden cursor-pointer';
     slide.setAttribute('data-index', idx);
     slide.innerHTML = `
       <img 

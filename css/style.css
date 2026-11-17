@@ -256,3 +256,42 @@ body {
   transform: translateY(0);
   opacity: 1;
 }
+
+/* Mobile Responsiveness & Touch Hardening */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+button, a {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* Responsive Font Scaling for Small Screens */
+@media (max-width: 480px) {
+  html {
+    font-size: 15px;
+  }
+  
+  .glass-card, .glass-dark {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  /* Prevent overflow on small cards */
+  .reveal-on-scroll {
+    transform: translateY(16px);
+  }
+}
+

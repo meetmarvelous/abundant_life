@@ -2,7 +2,7 @@
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <title>Contact & Directions | RCCG Abundant Life Area, Oyo</title>
   <meta name="description" content="Get in touch with RCCG Abundant Life Area, Sabo, Oyo, Oyo State. Join our church WhatsApp group, find driving directions, or send a prayer request.">
   
@@ -11,6 +11,13 @@
   <script>
     tailwind.config = {
       theme: {
+        screens: {
+          'xs': '420px',
+          'sm': '640px',
+          'md': '768px',
+          'lg': '1024px',
+          'xl': '1280px',
+        },
         extend: {
           colors: {
             brand: {
@@ -44,42 +51,47 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/jpeg" href="images/logo.png">
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased selection:bg-amber-400 selection:text-slate-950">
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-amber-400 selection:text-slate-950 overflow-x-hidden">
 
-  <!-- Top Bar -->
-  <div class="bg-gradient-to-r from-slate-950 via-brand-950 to-slate-950 text-white text-xs sm:text-sm py-2 px-4 border-b border-white/10">
-    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
-      <div class="flex items-center gap-2">
-        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 font-medium text-xs">
-          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span> Live Fellowship
+  <!-- Mobile-Optimized Top Announcement Bar -->
+  <div class="bg-gradient-to-r from-slate-950 via-brand-950 to-slate-950 text-white text-xs py-2 px-3 sm:px-6 border-b border-white/10">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
+      <!-- Left: Live badge + Responsive location -->
+      <div class="flex items-center gap-1.5 sm:gap-2.5 min-w-0">
+        <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 font-semibold text-[10px] sm:text-xs shrink-0">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span> Live
         </span>
-        <span class="text-slate-300">Apata Landlord, Along Oke Mogi, Sabo, Oyo, Oyo State</span>
+        <span class="text-slate-300 truncate text-[11px] sm:text-xs">
+          <span class="sm:hidden">Sabo, Oyo &bull; Sun 8:00 AM</span>
+          <span class="hidden sm:inline">Apata Landlord, Along Oke Mogi, Sabo, Oyo, Oyo State</span>
+        </span>
       </div>
-      <div class="flex items-center gap-4 text-xs text-slate-300">
-        <a href="https://chat.whatsapp.com/invite" target="_blank" class="inline-flex items-center gap-1 text-amber-400 hover:text-amber-300 font-semibold transition-colors">
-          <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> WhatsApp Community &rarr;
-        </a>
-      </div>
+
+      <!-- Right: Direct WhatsApp Join Link -->
+      <a href="https://chat.whatsapp.com/invite" target="_blank" class="shrink-0 inline-flex items-center gap-1 text-amber-400 hover:text-amber-300 font-bold text-[11px] sm:text-xs transition-colors">
+        <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+        <span>WhatsApp</span> &rarr;
+      </a>
     </div>
   </div>
 
   <!-- Header -->
   <header id="mainHeader" class="sticky top-0 z-40 w-full transition-all duration-300 bg-white/95 backdrop-blur-md border-b border-slate-200/70">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
       
       <!-- Brand Logo -->
-      <a href="index.html" class="flex items-center gap-3.5 group">
-        <div class="w-12 h-12 rounded-xl overflow-hidden shadow-md border border-slate-200 bg-white flex items-center justify-center p-1 group-hover:scale-105 transition-transform">
+      <a href="index.html" class="flex items-center gap-2.5 sm:gap-3.5 group min-w-0">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl overflow-hidden shadow-sm border border-slate-200 bg-white flex items-center justify-center p-0.5 shrink-0 group-hover:scale-105 transition-transform">
           <img src="images/logo.png" alt="RCCG Logo" class="w-full h-full object-contain">
         </div>
-        <div class="flex flex-col">
-          <span class="text-xs uppercase tracking-widest font-bold text-brand-900 flex items-center gap-1">
+        <div class="flex flex-col min-w-0">
+          <span class="text-[10px] sm:text-xs uppercase tracking-wider font-bold text-brand-900 flex items-center gap-1 leading-none">
             RCCG <span class="text-amber-600 font-medium">| Area Hqtrs</span>
           </span>
-          <span class="text-lg font-extrabold tracking-tight text-slate-900 group-hover:text-brand-900 transition-colors">
+          <span class="text-base sm:text-lg font-extrabold tracking-tight text-slate-900 group-hover:text-brand-900 transition-colors truncate leading-tight mt-0.5">
             Abundant Life Area
           </span>
-          <span class="text-[11px] text-slate-500 font-medium -mt-0.5">Sabo, Oyo, Oyo State</span>
+          <span class="text-[10px] sm:text-[11px] text-slate-500 font-medium leading-none truncate">Sabo, Oyo, Oyo State</span>
         </div>
       </a>
 
@@ -93,12 +105,12 @@
       </nav>
 
       <!-- Action -->
-      <div class="flex items-center gap-3">
-        <a href="#prayer" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-brand-900 hover:bg-brand-800 text-white text-sm font-semibold shadow-sm transition-all">
+      <div class="flex items-center gap-2 sm:gap-3">
+        <a href="#prayer" class="hidden sm:inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-brand-900 hover:bg-brand-800 text-white text-xs sm:text-sm font-semibold shadow-sm transition-all">
           <span>Prayer Request</span>
           <i data-lucide="heart" class="w-4 h-4 text-amber-400"></i>
         </a>
-        <button id="mobileMenuToggle" type="button" aria-label="Open mobile menu" class="md:hidden p-2.5 rounded-xl text-slate-700 hover:bg-slate-100">
+        <button id="mobileMenuToggle" type="button" aria-label="Open mobile menu" class="md:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100">
           <i data-lucide="menu" class="w-6 h-6"></i>
         </button>
       </div>
@@ -109,148 +121,152 @@
   <!-- Mobile Drawer -->
   <div id="mobileOverlay" class="fixed inset-0 bg-slate-950/60 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity duration-300"></div>
   <div id="mobileDrawer" class="fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col justify-between">
-    <div class="p-6">
-      <div class="flex items-center justify-between pb-6 border-b border-slate-100">
-        <div class="flex items-center gap-3">
-          <img src="images/logo.png" alt="RCCG Logo" class="w-10 h-10 object-contain">
+    <div class="p-5 sm:p-6 overflow-y-auto">
+      <div class="flex items-center justify-between pb-5 border-b border-slate-100">
+        <div class="flex items-center gap-2.5">
+          <img src="images/logo.png" alt="RCCG Logo" class="w-9 h-9 object-contain">
           <div>
             <div class="font-bold text-sm text-slate-900">Abundant Life</div>
-            <div class="text-xs text-slate-500">RCCG, Sabo, Oyo</div>
+            <div class="text-[11px] text-slate-500">RCCG, Sabo, Oyo</div>
           </div>
         </div>
         <button id="mobileMenuClose" aria-label="Close menu" class="p-2 text-slate-400 hover:text-slate-800">
           <i data-lucide="x" class="w-6 h-6"></i>
         </button>
       </div>
-      <nav class="flex flex-col gap-2 mt-6">
-        <a href="index.html" class="px-4 py-3 rounded-xl text-slate-700 hover:bg-slate-50 font-semibold flex items-center justify-between">
+      <nav class="flex flex-col gap-1.5 mt-5">
+        <a href="index.html" class="px-4 py-3 rounded-xl text-slate-700 hover:bg-slate-50 font-semibold flex items-center justify-between text-sm">
           <span>Home</span>
           <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
         </a>
-        <a href="about.html" class="px-4 py-3 rounded-xl text-slate-700 hover:bg-slate-50 font-semibold flex items-center justify-between">
+        <a href="about.html" class="px-4 py-3 rounded-xl text-slate-700 hover:bg-slate-50 font-semibold flex items-center justify-between text-sm">
           <span>About Us</span>
           <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
         </a>
-        <a href="gallery.html" class="px-4 py-3 rounded-xl text-slate-700 hover:bg-slate-50 font-semibold flex items-center justify-between">
+        <a href="gallery.html" class="px-4 py-3 rounded-xl text-slate-700 hover:bg-slate-50 font-semibold flex items-center justify-between text-sm">
           <span>Church Gallery</span>
           <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
         </a>
-        <a href="events.html" class="px-4 py-3 rounded-xl text-slate-700 hover:bg-slate-50 font-semibold flex items-center justify-between">
+        <a href="events.html" class="px-4 py-3 rounded-xl text-slate-700 hover:bg-slate-50 font-semibold flex items-center justify-between text-sm">
           <span>Programs & Events</span>
           <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
         </a>
-        <a href="contact.html" class="px-4 py-3 rounded-xl bg-brand-50 text-brand-900 font-bold flex items-center justify-between">
+        <a href="contact.html" class="px-4 py-3 rounded-xl bg-brand-50 text-brand-900 font-bold flex items-center justify-between text-sm">
           <span>Contact & Location</span>
           <i data-lucide="chevron-right" class="w-4 h-4 text-brand-500"></i>
         </a>
       </nav>
     </div>
-    <div class="p-6 bg-slate-50 border-t border-slate-100">
-      <a href="https://chat.whatsapp.com/invite" target="_blank" class="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-emerald-600 text-white font-semibold text-sm">
+    <div class="p-5 bg-slate-50 border-t border-slate-100 flex flex-col gap-2.5">
+      <a href="https://chat.whatsapp.com/invite" target="_blank" class="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-emerald-600 text-white font-bold text-xs sm:text-sm">
         <i data-lucide="message-circle" class="w-4 h-4"></i>
         <span>Join Church WhatsApp</span>
+      </a>
+      <a href="contact.html#directions" class="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-white border border-slate-200 text-slate-700 font-semibold text-xs sm:text-sm">
+        <i data-lucide="map-pin" class="w-3.5 h-3.5 text-amber-600"></i>
+        <span>Directions to Church</span>
       </a>
     </div>
   </div>
 
   <!-- PAGE HERO -->
-  <section class="navy-gradient-bg text-white py-16 text-center">
+  <section class="navy-gradient-bg text-white py-12 sm:py-16 text-center">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <span class="text-xs font-bold uppercase tracking-widest text-amber-400 bg-amber-400/10 px-3.5 py-1.5 rounded-full inline-block mb-3">
         Reach Out To Us
       </span>
-      <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white">
+      <h1 class="text-2xl xs:text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
         We Are Always Here For You
       </h1>
-      <p class="text-slate-300 mt-3 text-sm sm:text-base max-w-2xl mx-auto">
+      <p class="text-slate-300 mt-2.5 sm:mt-3 text-xs sm:text-base max-w-2xl mx-auto">
         Whether you are planning your first visit, seeking spiritual counsel, requesting prayers, or connecting online, feel free to reach out.
       </p>
     </div>
   </section>
 
   <!-- QUICK CONTACT CHANNELS & WHATSAPP CARD -->
-  <section class="py-12 bg-white border-b border-slate-200/60">
+  <section class="py-8 sm:py-12 bg-white border-b border-slate-200/60">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
         
         <!-- WhatsApp Group Card -->
-        <div class="p-6 rounded-3xl bg-emerald-50 border border-emerald-200/80 shadow-sm hover-lift flex flex-col justify-between">
+        <div class="p-5 sm:p-6 rounded-3xl bg-emerald-50 border border-emerald-200/80 shadow-sm hover-lift flex flex-col justify-between">
           <div>
-            <div class="w-12 h-12 rounded-2xl bg-emerald-600 text-white flex items-center justify-center mb-4 shadow-sm">
-              <i data-lucide="message-circle" class="w-6 h-6"></i>
+            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-emerald-600 text-white flex items-center justify-center mb-3 sm:mb-4 shadow-sm">
+              <i data-lucide="message-circle" class="w-5 h-5 sm:w-6 sm:h-6"></i>
             </div>
-            <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-800">Direct Community</span>
-            <h3 class="text-lg font-bold text-slate-900 mt-1 mb-2">Church WhatsApp Group</h3>
+            <span class="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-emerald-800">Direct Community</span>
+            <h3 class="text-base sm:text-lg font-bold text-slate-900 mt-1 mb-1.5 sm:mb-2">Church WhatsApp</h3>
             <p class="text-xs text-slate-600 leading-relaxed mb-4">
-              Get devotional thoughts, service alerts, audio notes, and fellowship updates directly on your WhatsApp.
+              Get devotional thoughts, service alerts, audio notes, and fellowship updates directly on WhatsApp.
             </p>
           </div>
-          <a href="https://chat.whatsapp.com/invite" target="_blank" class="w-full py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold text-center shadow transition-all flex items-center justify-center gap-1.5">
-            <span>Join WhatsApp Community</span>
+          <a href="https://chat.whatsapp.com/invite" target="_blank" class="w-full py-2.5 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold text-center shadow transition-all flex items-center justify-center gap-1.5">
+            <span>Join WhatsApp</span>
             <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
           </a>
         </div>
 
         <!-- Church Physical Location Card -->
-        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200/80 shadow-sm hover-lift flex flex-col justify-between">
+        <div class="p-5 sm:p-6 rounded-3xl bg-slate-50 border border-slate-200/80 shadow-sm hover-lift flex flex-col justify-between">
           <div>
-            <div class="w-12 h-12 rounded-2xl bg-brand-900 text-amber-400 flex items-center justify-center mb-4 shadow-sm">
-              <i data-lucide="map-pin" class="w-6 h-6"></i>
+            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-brand-900 text-amber-400 flex items-center justify-center mb-3 sm:mb-4 shadow-sm">
+              <i data-lucide="map-pin" class="w-5 h-5 sm:w-6 sm:h-6"></i>
             </div>
-            <span class="text-[11px] font-bold uppercase tracking-wider text-amber-600">Sanctuary Address</span>
-            <h3 class="text-lg font-bold text-slate-900 mt-1 mb-2">Sabo, Oyo State</h3>
+            <span class="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-amber-600">Sanctuary Address</span>
+            <h3 class="text-base sm:text-lg font-bold text-slate-900 mt-1 mb-1.5 sm:mb-2">Sabo, Oyo State</h3>
             <p class="text-xs text-slate-600 leading-relaxed mb-4">
               Apata Landlord, Along Oke Mogi, Sabo, Oyo, Oyo State, Nigeria.
             </p>
           </div>
-          <button onclick="copyChurchAddress()" class="w-full py-2.5 px-4 rounded-xl bg-white border border-slate-300 hover:border-slate-800 text-slate-800 text-xs font-bold transition-all flex items-center justify-center gap-1.5">
+          <button onclick="copyChurchAddress()" class="w-full py-2.5 px-3 rounded-xl bg-white border border-slate-300 hover:border-slate-800 text-slate-800 text-xs font-bold transition-all flex items-center justify-center gap-1.5">
             <i data-lucide="copy" class="w-3.5 h-3.5"></i>
-            <span>Copy Full Address</span>
+            <span>Copy Address</span>
           </button>
         </div>
 
         <!-- Phone Lines Card -->
-        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200/80 shadow-sm hover-lift flex flex-col justify-between">
+        <div class="p-5 sm:p-6 rounded-3xl bg-slate-50 border border-slate-200/80 shadow-sm hover-lift flex flex-col justify-between">
           <div>
-            <div class="w-12 h-12 rounded-2xl bg-amber-500 text-slate-950 flex items-center justify-center mb-4 shadow-sm">
-              <i data-lucide="phone-call" class="w-6 h-6"></i>
+            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-amber-500 text-slate-950 flex items-center justify-center mb-3 sm:mb-4 shadow-sm">
+              <i data-lucide="phone-call" class="w-5 h-5 sm:w-6 sm:h-6"></i>
             </div>
-            <span class="text-[11px] font-bold uppercase tracking-wider text-amber-600">Call & Counseling</span>
-            <h3 class="text-lg font-bold text-slate-900 mt-1 mb-2">Pastoral Helpline</h3>
+            <span class="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-amber-600">Call & Counseling</span>
+            <h3 class="text-base sm:text-lg font-bold text-slate-900 mt-1 mb-1.5 sm:mb-2">Pastoral Helpline</h3>
             <p class="text-xs text-slate-600 leading-relaxed mb-4">
-              Speak with a minister for prayer, counseling, or emergency assistance in Oyo.
+              Speak with a minister for prayer, counseling, or assistance in Oyo.
             </p>
           </div>
-          <a href="tel:+2348030000000" class="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold text-center transition-all flex items-center justify-center gap-1.5">
+          <a href="tel:+2348030000000" class="w-full py-2.5 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold text-center transition-all flex items-center justify-center gap-1.5">
             <i data-lucide="phone" class="w-3.5 h-3.5"></i>
-            <span>Call Pastor On Duty</span>
+            <span>Call Pastor</span>
           </a>
         </div>
 
         <!-- Social Media Handles Card -->
-        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200/80 shadow-sm hover-lift flex flex-col justify-between">
+        <div class="p-5 sm:p-6 rounded-3xl bg-slate-50 border border-slate-200/80 shadow-sm hover-lift flex flex-col justify-between">
           <div>
-            <div class="w-12 h-12 rounded-2xl bg-brand-500 text-white flex items-center justify-center mb-4 shadow-sm">
-              <i data-lucide="share-2" class="w-6 h-6"></i>
+            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-brand-500 text-white flex items-center justify-center mb-3 sm:mb-4 shadow-sm">
+              <i data-lucide="share-2" class="w-5 h-5 sm:w-6 sm:h-6"></i>
             </div>
-            <span class="text-[11px] font-bold uppercase tracking-wider text-brand-900">Digital Media</span>
-            <h3 class="text-lg font-bold text-slate-900 mt-1 mb-2">All Social Handles</h3>
+            <span class="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-brand-900">Digital Media</span>
+            <h3 class="text-base sm:text-lg font-bold text-slate-900 mt-1 mb-1.5 sm:mb-2">Social Handles</h3>
             <p class="text-xs text-slate-600 leading-relaxed mb-4">
               Stay connected with our livestreams, short sermon clips, and event announcements.
             </p>
           </div>
           <div class="flex items-center justify-between gap-1.5">
             <a href="https://facebook.com" target="_blank" aria-label="Facebook" class="flex-1 py-2 rounded-xl bg-blue-600 text-white flex items-center justify-center hover:opacity-90">
-              <i data-lucide="facebook" class="w-4 h-4"></i>
+              <i data-lucide="facebook" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
             </a>
             <a href="https://youtube.com" target="_blank" aria-label="YouTube" class="flex-1 py-2 rounded-xl bg-red-600 text-white flex items-center justify-center hover:opacity-90">
-              <i data-lucide="youtube" class="w-4 h-4"></i>
+              <i data-lucide="youtube" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
             </a>
             <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="flex-1 py-2 rounded-xl bg-pink-600 text-white flex items-center justify-center hover:opacity-90">
-              <i data-lucide="instagram" class="w-4 h-4"></i>
+              <i data-lucide="instagram" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
             </a>
             <a href="https://twitter.com" target="_blank" aria-label="Twitter/X" class="flex-1 py-2 rounded-xl bg-slate-900 text-white flex items-center justify-center hover:opacity-90">
-              <i data-lucide="twitter" class="w-4 h-4"></i>
+              <i data-lucide="twitter" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
             </a>
           </div>
         </div>
@@ -260,19 +276,19 @@
   </section>
 
   <!-- INTERACTIVE FORMS & LOCATION SECTION -->
-  <section class="py-16 bg-slate-50">
+  <section class="py-12 sm:py-16 bg-slate-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
         
         <!-- Forms Column -->
-        <div class="lg:col-span-7 space-y-8">
+        <div class="lg:col-span-7 space-y-6 sm:space-y-8">
           
           <!-- Contact Form Box -->
-          <div class="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-sm">
-            <div class="mb-6">
+          <div class="bg-white rounded-3xl p-5 sm:p-8 border border-slate-200/80 shadow-sm">
+            <div class="mb-5 sm:mb-6">
               <span class="text-xs font-bold uppercase tracking-wider text-amber-600">Send A Note</span>
-              <h2 class="text-2xl font-bold text-slate-900 mt-1">Get in Touch With Us</h2>
+              <h2 class="text-xl sm:text-2xl font-bold text-slate-900 mt-1">Get in Touch With Us</h2>
               <p class="text-xs sm:text-sm text-slate-500 mt-1">
                 Have questions about our church, membership, or visiting us in Oyo? Send us a message.
               </p>
@@ -282,22 +298,22 @@
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label for="contactName" class="block text-xs font-semibold text-slate-700 mb-1">Your Full Name *</label>
-                  <input type="text" id="contactName" required placeholder="e.g. Brother John Ade" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-brand-900 focus:ring-1 focus:ring-brand-900">
+                  <input type="text" id="contactName" required placeholder="e.g. Brother John Ade" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-base sm:text-sm focus:outline-none focus:border-brand-900 focus:ring-1 focus:ring-brand-900">
                 </div>
                 <div>
                   <label for="contactPhone" class="block text-xs font-semibold text-slate-700 mb-1">Phone / WhatsApp Number *</label>
-                  <input type="tel" id="contactPhone" required placeholder="e.g. 0801 234 5678" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-brand-900 focus:ring-1 focus:ring-brand-900">
+                  <input type="tel" id="contactPhone" required placeholder="e.g. 0801 234 5678" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-base sm:text-sm focus:outline-none focus:border-brand-900 focus:ring-1 focus:ring-brand-900">
                 </div>
               </div>
 
               <div>
                 <label for="contactEmail" class="block text-xs font-semibold text-slate-700 mb-1">Email Address</label>
-                <input type="email" id="contactEmail" placeholder="yourname@gmail.com" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-brand-900 focus:ring-1 focus:ring-brand-900">
+                <input type="email" id="contactEmail" placeholder="yourname@gmail.com" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-base sm:text-sm focus:outline-none focus:border-brand-900 focus:ring-1 focus:ring-brand-900">
               </div>
 
               <div>
                 <label for="contactSubject" class="block text-xs font-semibold text-slate-700 mb-1">Purpose / Topic</label>
-                <select id="contactSubject" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-brand-900 focus:ring-1 focus:ring-brand-900 bg-white">
+                <select id="contactSubject" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-base sm:text-sm focus:outline-none focus:border-brand-900 focus:ring-1 focus:ring-brand-900 bg-white">
                   <option value="visiting">First-Time Visitor Inquiry</option>
                   <option value="testimony">Praise Report / Testimony</option>
                   <option value="fellowship">House Fellowship / Ministry Join</option>
@@ -308,10 +324,10 @@
 
               <div>
                 <label for="contactMessage" class="block text-xs font-semibold text-slate-700 mb-1">Your Message *</label>
-                <textarea id="contactMessage" rows="4" required placeholder="How can we assist or pray with you today?" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-brand-900 focus:ring-1 focus:ring-brand-900"></textarea>
+                <textarea id="contactMessage" rows="4" required placeholder="How can we assist or pray with you today?" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-base sm:text-sm focus:outline-none focus:border-brand-900 focus:ring-1 focus:ring-brand-900"></textarea>
               </div>
 
-              <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-brand-900 hover:bg-brand-800 text-white font-bold text-sm shadow transition-all flex items-center justify-center gap-2">
+              <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-brand-900 hover:bg-brand-800 text-white font-bold text-xs sm:text-sm shadow transition-all flex items-center justify-center gap-2">
                 <span>Send Message</span>
                 <i data-lucide="send" class="w-4 h-4"></i>
               </button>
@@ -319,10 +335,10 @@
           </div>
 
           <!-- Prayer Request Box (Anchor #prayer) -->
-          <div id="prayer" class="bg-gradient-to-br from-brand-950 to-slate-900 text-white rounded-3xl p-8 border border-white/10 shadow-lg">
-            <div class="mb-6">
+          <div id="prayer" class="bg-gradient-to-br from-brand-950 to-slate-900 text-white rounded-3xl p-5 sm:p-8 border border-white/10 shadow-lg">
+            <div class="mb-5 sm:mb-6">
               <span class="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-400/10 px-3 py-1 rounded-full inline-block">Altar of Intercession</span>
-              <h2 class="text-2xl font-bold text-white mt-3">Submit a Prayer Request</h2>
+              <h2 class="text-xl sm:text-2xl font-bold text-white mt-2 sm:mt-3">Submit a Prayer Request</h2>
               <p class="text-xs sm:text-sm text-slate-300 mt-1">
                 "For where two or three are gathered together in My name, I am there in the midst of them." Every prayer submitted is held confidential and brought before God during our Thursday Faith Clinic.
               </p>
@@ -332,17 +348,17 @@
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label for="prayerName" class="block text-xs font-semibold text-slate-200 mb-1">Your Name (Optional)</label>
-                  <input type="text" id="prayerName" placeholder="Leave blank if confidential" class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white text-sm focus:outline-none focus:border-amber-400 placeholder:text-slate-400">
+                  <input type="text" id="prayerName" placeholder="Leave blank if confidential" class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white text-base sm:text-sm focus:outline-none focus:border-amber-400 placeholder:text-slate-400">
                 </div>
                 <div>
-                  <label for="prayerPhone" class="block text-xs font-semibold text-slate-200 mb-1">WhatsApp / Phone (For Follow-up)</label>
-                  <input type="tel" id="prayerPhone" placeholder="e.g. 0801 234 5678" class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white text-sm focus:outline-none focus:border-amber-400 placeholder:text-slate-400">
+                  <label for="prayerPhone" class="block text-xs font-semibold text-slate-200 mb-1">WhatsApp / Phone</label>
+                  <input type="tel" id="prayerPhone" placeholder="e.g. 0801 234 5678" class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white text-base sm:text-sm focus:outline-none focus:border-amber-400 placeholder:text-slate-400">
                 </div>
               </div>
 
               <div>
                 <label for="prayerCategory" class="block text-xs font-semibold text-slate-200 mb-1">Need Category</label>
-                <select id="prayerCategory" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-white/20 text-white text-sm focus:outline-none focus:border-amber-400">
+                <select id="prayerCategory" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-white/20 text-white text-base sm:text-sm focus:outline-none focus:border-amber-400">
                   <option value="healing">Divine Healing & Health</option>
                   <option value="breakthrough">Financial & Career Breakthrough</option>
                   <option value="fruit">Fruit of the Womb & Family</option>
@@ -354,10 +370,10 @@
 
               <div>
                 <label for="prayerDetails" class="block text-xs font-semibold text-slate-200 mb-1">Prayer Request Details *</label>
-                <textarea id="prayerDetails" rows="4" required placeholder="Detail your prayer petition here. We stand with you in faith..." class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white text-sm focus:outline-none focus:border-amber-400 placeholder:text-slate-400"></textarea>
+                <textarea id="prayerDetails" rows="4" required placeholder="Detail your prayer petition here. We stand with you in faith..." class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white text-base sm:text-sm focus:outline-none focus:border-amber-400 placeholder:text-slate-400"></textarea>
               </div>
 
-              <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-sm shadow-lg transition-all flex items-center justify-center gap-2">
+              <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-xs sm:text-sm shadow-lg transition-all flex items-center justify-center gap-2">
                 <i data-lucide="flame" class="w-4 h-4"></i>
                 <span>Submit to Ministerial Prayer Team</span>
               </button>
@@ -370,35 +386,35 @@
         <div class="lg:col-span-5 space-y-6" id="directions">
           
           <!-- Address & Directions Card -->
-          <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-sm">
+          <div class="bg-white rounded-3xl p-5 sm:p-8 border border-slate-200/80 shadow-sm">
             <span class="text-xs font-bold uppercase tracking-wider text-amber-600">Location Guide</span>
-            <h3 class="text-xl font-bold text-slate-900 mt-1 mb-4">How to Locate Us in Oyo</h3>
+            <h3 class="text-lg sm:text-xl font-bold text-slate-900 mt-1 mb-4">How to Locate Us in Oyo</h3>
             
-            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 mb-6">
-              <div class="font-bold text-slate-900 text-sm">Full Sanctuary Address:</div>
+            <div class="p-3.5 sm:p-4 rounded-2xl bg-slate-50 border border-slate-200 mb-5 sm:mb-6">
+              <div class="font-bold text-slate-900 text-xs sm:text-sm">Full Sanctuary Address:</div>
               <p class="text-xs sm:text-sm text-slate-600 mt-1 font-medium leading-relaxed">
                 Apata Landlord, Along Oke Mogi, Sabo, Oyo, Oyo State, Nigeria.
               </p>
             </div>
 
             <!-- Route Tips -->
-            <div class="space-y-3 text-xs sm:text-sm text-slate-600 mb-6">
-              <div class="flex items-start gap-3">
-                <div class="w-6 h-6 rounded-full bg-brand-50 text-brand-900 flex items-center justify-center shrink-0 font-bold text-xs mt-0.5">1</div>
+            <div class="space-y-3 text-xs sm:text-sm text-slate-600 mb-5 sm:mb-6">
+              <div class="flex items-start gap-2.5 sm:gap-3">
+                <div class="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-brand-50 text-brand-900 flex items-center justify-center shrink-0 font-bold text-[10px] sm:text-xs mt-0.5">1</div>
                 <div>From <strong>Sabo Market / Roundabout</strong>, head towards the Oke Mogi road.</div>
               </div>
-              <div class="flex items-start gap-3">
-                <div class="w-6 h-6 rounded-full bg-brand-50 text-brand-900 flex items-center justify-center shrink-0 font-bold text-xs mt-0.5">2</div>
+              <div class="flex items-start gap-2.5 sm:gap-3">
+                <div class="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-brand-50 text-brand-900 flex items-center justify-center shrink-0 font-bold text-[10px] sm:text-xs mt-0.5">2</div>
                 <div>Ask or look out for the <strong>Apata Landlord</strong> junction along Oke Mogi.</div>
               </div>
-              <div class="flex items-start gap-3">
-                <div class="w-6 h-6 rounded-full bg-brand-50 text-brand-900 flex items-center justify-center shrink-0 font-bold text-xs mt-0.5">3</div>
+              <div class="flex items-start gap-2.5 sm:gap-3">
+                <div class="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-brand-50 text-brand-900 flex items-center justify-center shrink-0 font-bold text-[10px] sm:text-xs mt-0.5">3</div>
                 <div>The <strong>RCCG Abundant Life Area</strong> sanctuary sign is clearly visible with ample parking space.</div>
               </div>
             </div>
 
             <!-- Map View Container -->
-            <div class="rounded-2xl overflow-hidden border border-slate-200 h-64 relative bg-slate-100 flex items-center justify-center">
+            <div class="rounded-2xl overflow-hidden border border-slate-200 h-52 sm:h-64 relative bg-slate-100 flex items-center justify-center">
               <iframe 
                 title="Church Location Map Sabo Oyo"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.569947936055!2d3.9238805748231267!3d7.835252892185906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10375323bbd4177d%3A0xc3f8e5f22e850b55!2sSabo%2C%20Oyo!5e0!3m2!1sen!2sng!4v1700000000000!5m2!1sen!2sng" 
@@ -408,7 +424,7 @@
               </iframe>
             </div>
 
-            <div class="mt-4 flex gap-3">
+            <div class="mt-4 flex flex-col xs:flex-row gap-2.5 sm:gap-3">
               <a href="https://maps.google.com/?q=Sabo+Oyo+Oyo+State+Nigeria" target="_blank" class="flex-1 py-3 rounded-xl bg-brand-900 hover:bg-brand-800 text-white font-bold text-xs text-center flex items-center justify-center gap-1.5 transition-colors">
                 <i data-lucide="map" class="w-4 h-4"></i>
                 <span>Open in Google Maps</span>
@@ -421,13 +437,13 @@
           </div>
 
           <!-- First Time Visitor FAQ -->
-          <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-sm">
-            <h3 class="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
-              <i data-lucide="help-circle" class="w-5 h-5 text-amber-500"></i>
+          <div class="bg-white rounded-3xl p-5 sm:p-8 border border-slate-200/80 shadow-sm">
+            <h3 class="text-base sm:text-lg font-bold text-slate-900 mb-3 sm:mb-4 flex items-center gap-2">
+              <i data-lucide="help-circle" class="w-4 h-4 sm:w-5 sm:h-5 text-amber-500"></i>
               <span>First-Time Visitor FAQ</span>
             </h3>
 
-            <div class="space-y-4 text-xs sm:text-sm text-slate-600">
+            <div class="space-y-3 sm:space-y-4 text-xs sm:text-sm text-slate-600">
               <div>
                 <h4 class="font-bold text-slate-900">What time should I arrive?</h4>
                 <p class="mt-0.5">We recommend arriving around 7:50 AM for Sunday School or 8:50 AM for the main Celebration Service.</p>
@@ -451,24 +467,24 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-slate-950 text-slate-400 pt-16 pb-12 border-t border-slate-900">
+  <footer class="bg-slate-950 text-slate-400 pt-12 sm:pt-16 pb-10 sm:pb-12 border-t border-slate-900">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800/80">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-10 pb-10 sm:pb-12 border-b border-slate-800/80">
         <div class="lg:col-span-2 space-y-4">
           <div class="flex items-center gap-3">
-            <img src="images/logo.png" alt="RCCG Logo" class="w-12 h-12 object-contain bg-white rounded-lg p-1">
+            <img src="images/logo.png" alt="RCCG Logo" class="w-10 h-10 sm:w-12 sm:h-12 object-contain bg-white rounded-lg p-1">
             <div>
               <span class="text-xs uppercase tracking-widest text-amber-500 font-bold block">RCCG</span>
-              <span class="text-lg font-bold text-white block">Abundant Life Area</span>
+              <span class="text-base sm:text-lg font-bold text-white block">Abundant Life Area</span>
             </div>
           </div>
-          <p class="text-sm text-slate-400 leading-relaxed max-w-sm">
+          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed max-w-sm">
             Apata Landlord, Along Oke Mogi, Sabo, Oyo, Oyo State. Experience divine grace and spiritual fulfillment.
           </p>
         </div>
         <div>
-          <h4 class="text-white font-bold text-sm mb-4 uppercase tracking-wider">Navigation</h4>
-          <ul class="space-y-2 text-sm">
+          <h4 class="text-white font-bold text-xs sm:text-sm mb-3 sm:mb-4 uppercase tracking-wider">Navigation</h4>
+          <ul class="space-y-2 text-xs sm:text-sm">
             <li><a href="index.html" class="hover:text-amber-400 transition-colors">Home</a></li>
             <li><a href="about.html" class="hover:text-amber-400 transition-colors">About Us</a></li>
             <li><a href="gallery.html" class="hover:text-amber-400 transition-colors">Gallery</a></li>
@@ -477,29 +493,29 @@
           </ul>
         </div>
         <div>
-          <h4 class="text-white font-bold text-sm mb-4 uppercase tracking-wider">Gatherings</h4>
-          <ul class="space-y-2 text-sm text-slate-400">
+          <h4 class="text-white font-bold text-xs sm:text-sm mb-3 sm:mb-4 uppercase tracking-wider">Gatherings</h4>
+          <ul class="space-y-2 text-xs sm:text-sm text-slate-400">
             <li><span class="text-white font-medium block">Sunday Service</span> 8:00 AM – 11:30 AM</li>
             <li><span class="text-white font-medium block">Digging Deep (Tue)</span> 5:30 PM – 7:00 PM</li>
             <li><span class="text-white font-medium block">Faith Clinic (Thu)</span> 5:30 PM – 7:00 PM</li>
           </ul>
         </div>
         <div>
-          <h4 class="text-white font-bold text-sm mb-4 uppercase tracking-wider">Connect</h4>
-          <div class="flex items-center gap-2.5">
-            <a href="https://chat.whatsapp.com/invite" target="_blank" class="w-9 h-9 rounded-full bg-emerald-600/20 text-emerald-400 hover:bg-emerald-600 hover:text-white flex items-center justify-center transition-colors">
+          <h4 class="text-white font-bold text-xs sm:text-sm mb-3 sm:mb-4 uppercase tracking-wider">Connect</h4>
+          <div class="flex items-center gap-2">
+            <a href="https://chat.whatsapp.com/invite" target="_blank" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-emerald-600/20 text-emerald-400 hover:bg-emerald-600 hover:text-white flex items-center justify-center transition-colors">
               <i data-lucide="message-circle" class="w-4 h-4"></i>
             </a>
-            <a href="https://facebook.com" target="_blank" class="w-9 h-9 rounded-full bg-slate-800 text-slate-300 hover:bg-blue-600 hover:text-white flex items-center justify-center transition-colors">
+            <a href="https://facebook.com" target="_blank" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-slate-800 text-slate-300 hover:bg-blue-600 hover:text-white flex items-center justify-center transition-colors">
               <i data-lucide="facebook" class="w-4 h-4"></i>
             </a>
-            <a href="https://youtube.com" target="_blank" class="w-9 h-9 rounded-full bg-slate-800 text-slate-300 hover:bg-red-600 hover:text-white flex items-center justify-center transition-colors">
+            <a href="https://youtube.com" target="_blank" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-slate-800 text-slate-300 hover:bg-red-600 hover:text-white flex items-center justify-center transition-colors">
               <i data-lucide="youtube" class="w-4 h-4"></i>
             </a>
           </div>
         </div>
       </div>
-      <div class="pt-8 text-xs text-slate-500 text-center">
+      <div class="pt-6 sm:pt-8 text-[11px] sm:text-xs text-slate-500 text-center">
         &copy; 2026 RCCG Abundant Life Area, Sabo, Oyo. All rights reserved.
       </div>
     </div>
